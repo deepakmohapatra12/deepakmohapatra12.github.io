@@ -1,0 +1,435 @@
+<div class="row">
+    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+        <li [ngbNavItem]="1">
+            <button ngbNavLink>My Surveys (3)</button>
+            <ng-template ngbNavContent>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <div class="d-flex align-items-center">
+                                            <div class="avtar-my-survey">
+                                                <i class="ti ti-credit-card"></i>
+                                            </div>
+                                            <div class="ms-2">
+                                                    <span class="my-survey-desc cursor-pointer" (click)="navigateToSurveyDetails()">Microbrand Watches</span>
+                                                <p class="mb-0 opacity-50 text-sm">Last Modified: 4th Aug 2023 03:45pm</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Questions</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Responses</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0%</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Completion Rate</p>
+                                            </div>
+                                            <div class="btn-group ms-5" ngbDropdown>
+                                                <a type="button" class="bg-white" title="Preview Survey">
+                                                    <i class="ti ti-eye"></i>
+                                                </a>
+                                                <a type="button" title="options" class="bg-white ms-2" data-bs-toggle="dropdown" ngbDropdownToggle>
+                                                    <i class="ti ti-dots vertical-icons"></i>
+                                                </a>
+                                                <a type="button" title="Share survey" class="bg-white ms-2" (click)="share(shareModal)">
+                                                    <i class="ti ti-share"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                                    <li><button class="dropdown-item" type="button" (click)="share(shareModal)">Share Surveys</button></li>
+                                                    <li><button class="dropdown-item" type="button">View Results</button></li>
+                                                    <li><button class="dropdown-item" type="button">Edit Surveys</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex align-items-center">
+                                            <div class="avtar-my-survey">
+                                                <i class="ti ti-credit-card"></i>
+                                            </div>
+                                            <div class="ms-2">
+                                                <span class="my-survey-desc">EarnPlus Piping</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Last Modified: 4th Aug 2023 03:45pm</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Questions</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Responses</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0%</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Completion Rate</p>
+                                            </div>
+                                            <div class="btn-group ms-5" ngbDropdown>
+                                                <a type="button" class="bg-white" title="Preview Survey">
+                                                    <i class="ti ti-eye"></i>
+                                                </a>
+                                                <a type="button" title="options" class="bg-white ms-2" data-bs-toggle="dropdown" ngbDropdownToggle>
+                                                    <i class="ti ti-dots vertical-icons"></i>
+                                                </a>
+                                                <a type="button" title="Share survey" class="bg-white ms-2">
+                                                    <i class="ti ti-share"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                                    <li><button class="dropdown-item" type="button" (click)="share(shareModal)">Share Surveys</button></li>
+                                                    <li><button class="dropdown-item" type="button">View Results</button></li>
+                                                    <li><button class="dropdown-item" type="button">Edit Surveys</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex align-items-center">
+                                            <div class="avtar-my-survey">
+                                                <i class="ti ti-credit-card"></i>
+                                            </div>
+                                            <div class="ms-2">
+                                                <span class="my-survey-desc">Brass & Bezel</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Last Modified: 4th Aug 2023 03:45pm</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Questions</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Responses</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0%</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Completion Rate</p>
+                                            </div>
+                                            <div class="btn-group ms-5" ngbDropdown>
+                                                <a type="button" class="bg-white" title="Preview Survey">
+                                                    <i class="ti ti-eye"></i>
+                                                </a>
+                                                <a type="button" title="options" class="bg-white ms-2" data-bs-toggle="dropdown" ngbDropdownToggle>
+                                                    <i class="ti ti-dots vertical-icons"></i>
+                                                </a>
+                                                <a type="button" title="Share survey" class="bg-white ms-2">
+                                                    <i class="ti ti-share"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                                    <li><button class="dropdown-item" type="button" (click)="share(shareModal)">Share Surveys</button></li>
+                                                    <li><button class="dropdown-item" type="button">View Results</button></li>
+                                                    <li><button class="dropdown-item" type="button">Edit Surveys</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </li>
+        <li [ngbNavItem]="2">
+            <button ngbNavLink>Shared Surveys (2)</button>
+            <ng-template ngbNavContent>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <div class="d-flex align-items-center">
+                                            <div class="avtar-my-survey">
+                                                <i class="ti ti-credit-card"></i>
+                                            </div>
+                                            <div class="ms-2">
+                                                <span class="my-survey-desc">Microbrand Watches</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Last Modified: 4th Aug 2023 03:45pm</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Questions</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Responses</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0%</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Completion Rate</p>
+                                            </div>
+                                            <div class="btn-group ms-5" ngbDropdown>
+                                                <a type="button" class="bg-white" title="Preview Survey">
+                                                    <i class="ti ti-eye"></i>
+                                                </a>
+                                                <a type="button" title="options" class="bg-white ms-2" data-bs-toggle="dropdown" ngbDropdownToggle>
+                                                    <i class="ti ti-dots vertical-icons"></i>
+                                                </a>
+                                                <a type="button" title="Share survey" class="bg-white ms-2" (click)="share(shareModal)">
+                                                    <i class="ti ti-share"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                                    <li><button class="dropdown-item" type="button" (click)="share(shareModal)">Share Surveys</button></li>
+                                                    <li><button class="dropdown-item" type="button">View Results</button></li>
+                                                    <li><button class="dropdown-item" type="button">Edit Surveys</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex align-items-center">
+                                            <div class="avtar-my-survey">
+                                                <i class="ti ti-credit-card"></i>
+                                            </div>
+                                            <div class="ms-2">
+                                                <span class="my-survey-desc">EarnPlus Piping</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Last Modified: 4th Aug 2023 03:45pm</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Questions</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Responses</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0%</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Completion Rate</p>
+                                            </div>
+                                            <div class="btn-group ms-5" ngbDropdown>
+                                                <a type="button" class="bg-white" title="Preview Survey">
+                                                    <i class="ti ti-eye"></i>
+                                                </a>
+                                                <a type="button" title="options" class="bg-white ms-2" data-bs-toggle="dropdown" ngbDropdownToggle>
+                                                    <i class="ti ti-dots vertical-icons"></i>
+                                                </a>
+                                                <a type="button" title="Share survey" class="bg-white ms-2">
+                                                    <i class="ti ti-share"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                                    <li><button class="dropdown-item" type="button" (click)="share(shareModal)">Share Surveys</button></li>
+                                                    <li><button class="dropdown-item" type="button">View Results</button></li>
+                                                    <li><button class="dropdown-item" type="button">Edit Surveys</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex align-items-center">
+                                            <div class="avtar-my-survey">
+                                                <i class="ti ti-credit-card"></i>
+                                            </div>
+                                            <div class="ms-2">
+                                                <span class="my-survey-desc">Brass & Bezel</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Last Modified: 4th Aug 2023 03:45pm</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Questions</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Responses</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0%</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Completion Rate</p>
+                                            </div>
+                                            <div class="btn-group ms-5" ngbDropdown>
+                                                <a type="button" class="bg-white" title="Preview Survey">
+                                                    <i class="ti ti-eye"></i>
+                                                </a>
+                                                <a type="button" title="options" class="bg-white ms-2" data-bs-toggle="dropdown" ngbDropdownToggle>
+                                                    <i class="ti ti-dots vertical-icons"></i>
+                                                </a>
+                                                <a type="button" title="Share survey" class="bg-white ms-2">
+                                                    <i class="ti ti-share"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                                    <li><button class="dropdown-item" type="button" (click)="share(shareModal)">Share Surveys</button></li>
+                                                    <li><button class="dropdown-item" type="button">View Results</button></li>
+                                                    <li><button class="dropdown-item" type="button">Edit Surveys</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </li>
+        <li [ngbNavItem]="3">
+            <button ngbNavLink>Drafts</button>
+            <ng-template ngbNavContent>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <div class="d-flex align-items-center">
+                                            <div class="avtar-my-survey">
+                                                <i class="ti ti-credit-card"></i>
+                                            </div>
+                                            <div class="ms-2">
+                                                <span class="my-survey-desc">Microbrand Watches</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Last Modified: 4th Aug 2023 03:45pm</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Questions</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Responses</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0%</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Completion Rate</p>
+                                            </div>
+                                            <div class="btn-group ms-5" ngbDropdown>
+                                                <a type="button" class="bg-white" title="Preview Survey">
+                                                    <i class="ti ti-eye"></i>
+                                                </a>
+                                                <a type="button" title="options" class="bg-white ms-2" data-bs-toggle="dropdown" ngbDropdownToggle>
+                                                    <i class="ti ti-dots vertical-icons"></i>
+                                                </a>
+                                                <a type="button" title="Share survey" class="bg-white ms-2" (click)="share(shareModal)">
+                                                    <i class="ti ti-share"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                                    <li><button class="dropdown-item" type="button" (click)="share(shareModal)">Share Surveys</button></li>
+                                                    <li><button class="dropdown-item" type="button">View Results</button></li>
+                                                    <li><button class="dropdown-item" type="button">Edit Surveys</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex align-items-center">
+                                            <div class="avtar-my-survey">
+                                                <i class="ti ti-credit-card"></i>
+                                            </div>
+                                            <div class="ms-2">
+                                                <span class="my-survey-desc">EarnPlus Piping</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Last Modified: 4th Aug 2023 03:45pm</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Questions</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Responses</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0%</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Completion Rate</p>
+                                            </div>
+                                            <div class="btn-group ms-5" ngbDropdown>
+                                                <a type="button" class="bg-white" title="Preview Survey">
+                                                    <i class="ti ti-eye"></i>
+                                                </a>
+                                                <a type="button" title="options" class="bg-white ms-2" data-bs-toggle="dropdown" ngbDropdownToggle>
+                                                    <i class="ti ti-dots vertical-icons"></i>
+                                                </a>
+                                                <a type="button" title="Share survey" class="bg-white ms-2">
+                                                    <i class="ti ti-share"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                                    <li><button class="dropdown-item" type="button" (click)="share(shareModal)">Share Surveys</button></li>
+                                                    <li><button class="dropdown-item" type="button">View Results</button></li>
+                                                    <li><button class="dropdown-item" type="button">Edit Surveys</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex align-items-center">
+                                            <div class="avtar-my-survey">
+                                                <i class="ti ti-credit-card"></i>
+                                            </div>
+                                            <div class="ms-2">
+                                                <span class="my-survey-desc">Brass & Bezel</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Last Modified: 4th Aug 2023 03:45pm</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Questions</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Responses</p>
+                                            </div>
+                                            <div class="ms-5">
+                                                <span class="my-survey-desc">0%</span> 
+                                                <p class="mb-0 opacity-50 text-sm">Completion Rate</p>
+                                            </div>
+                                            <div class="btn-group ms-5" ngbDropdown>
+                                                <a type="button" class="bg-white" title="Preview Survey">
+                                                    <i class="ti ti-eye"></i>
+                                                </a>
+                                                <a type="button" title="options" class="bg-white ms-2" data-bs-toggle="dropdown" ngbDropdownToggle>
+                                                    <i class="ti ti-dots vertical-icons"></i>
+                                                </a>
+                                                <a type="button" title="Share survey" class="bg-white ms-2">
+                                                    <i class="ti ti-share"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                                                    <li><button class="dropdown-item" type="button" (click)="share(shareModal)">Share Surveys</button></li>
+                                                    <li><button class="dropdown-item" type="button">View Results</button></li>
+                                                    <li><button class="dropdown-item" type="button">Edit Surveys</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </li>
+    </ul>
+    
+    <div [ngbNavOutlet]="nav" class="mt-2"></div>
+    
+    <ng-template #shareModal let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Send Via Email</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="card">
+                <div class="card-body">
+                    <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+                        <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding>
+                          <button mat-icon-button disabled></button>
+                          <p>{{node.name}}</p>
+                        </mat-tree-node>
+                        <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+                          <button mat-icon-button matTreeNodeToggle
+                                  [attr.aria-label]="'toggle ' + node.filename">
+                                  <i class="fa fa-chevron-right fa-1x"></i>
+                          </button>
+                        <mat-checkbox [checked]="descendantsAllSelected(node)"
+                                        [indeterminate]="descendantsPartiallySelected(node)"
+                                        (change)="todoItemSelectionToggle(node)">{{node.name}}</mat-checkbox>
+                        </mat-tree-node>
+                      </mat-tree>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" (click)="modal.close('yes')">Submit</button>
+        </div>
+      </ng-template>
+</div>

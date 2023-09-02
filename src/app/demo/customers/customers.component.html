@@ -1,0 +1,29 @@
+<div class="row">
+    <h3>Customers Details</h3>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col" sortable="name">Survey Name</th>
+          <th scope="col" sortable="name">Name</th>
+          <th scope="col" sortable="area">Email</th>
+          <!-- <th scope="col" sortable="population">Mobile No.</th> -->
+          <th scope="col" sortable="population">Response Submitted</th>
+          <!-- <th scope="col" sortable="population">Location</th> -->
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let customer of customers">
+          <th scope="row">{{ customer.id }}</th>
+          <td><ngb-highlight [result]="customer.surveyName"></ngb-highlight></td>
+          <td>
+            <ngb-highlight [result]="customer.name"></ngb-highlight>
+          </td>
+          <td><ngb-highlight [result]="customer.email"></ngb-highlight></td>
+          <!-- <td><ngb-highlight [result]="customer.mobile | number"></ngb-highlight></td> -->
+          <td><ngb-highlight [result]="customer.ResponseSubmitted"></ngb-highlight></td>
+          <!-- <td><ngb-highlight [result]="customer.location"></ngb-highlight></td> -->
+        </tr>
+        </tbody>
+      </table>
+</div>
